@@ -8,7 +8,7 @@ type AttachedFile struct {
 	DisplayName   string `json:"displayname"`
 	FullName      string `json:"fullname"`
 	Name          string `json:"name"`
-	MD5           string `json:"md5`
+	MD5           string `json:"md5"`
 	Path          string `json:"path"`
 	ThumbnailPath string `json:"thumbnail"`
 	Type          int    `json:"type"`

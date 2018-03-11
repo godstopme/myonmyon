@@ -6,6 +6,25 @@ import (
 	"path/filepath"
 )
 
+func SaveFile(name string, contents []byte) error {
+	file, err := os.Create(name)
+	if err != nil {
+		log.Println("Error creating file", err)
+
+		return err
+	}
+
+	defer file.Close()
+
+	if _, err := file.Write(contents); err != nil {
+		log.Println("Error writting file", name, "; ", err)
+
+		return err
+	}
+
+	return nil
+}
+
 func Dump(name, contents string) {
 	fpath := filepath.Join("dumps/", name)
 
